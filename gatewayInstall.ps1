@@ -172,9 +172,9 @@ $uri = "https://go.microsoft.com/fwlink/?linkid=839822"
 Trace-Log "Gateway download fw link: $uri"
 $gwPath= "$PWD\gateway.msi"
 Trace-Log "Gateway download location: $gwPath"
-
+New-Item "C:\success" -Type Folder 
 
 Download-Gateway $uri $gwPath
-Install-Gateway $gwPath
+# Install-Gateway $gwPath
 
-Register-Gateway $gatewayKey
+# Register-Gateway $gatewayKey
